@@ -10,7 +10,6 @@ export default function CreatePostDialog({ newPost }: any) {
   const [isOpen, setIsOpen] = React.useState(false);
   const handleNewPost = async () => {
     const createPost = await PostsService.createPost(newPost);
-    setIsOpen(false);
     route.push("/");
   };
   return (

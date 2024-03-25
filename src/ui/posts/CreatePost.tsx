@@ -1,6 +1,4 @@
 'use client'
-import PostsService from '@/services/posts.services';
-import { redirect } from 'next/navigation';
 import React, { useState } from 'react';
 import CreatePostDialog from './CreatePostDialog';
 
@@ -10,7 +8,7 @@ const CreatePost = ({ userId }: { userId: number }) => {
   const newPost = { title, body, userId };
 
   return (
-    <form className="space-y-4">
+    <section className="space-y-4">
       <div>
         <label htmlFor="title" className="block text-sm font-medium text-gray-700">Title</label>
         <input
@@ -40,7 +38,7 @@ const CreatePost = ({ userId }: { userId: number }) => {
         </button> */}
         <CreatePostDialog newPost = {newPost}/>
       </div>
-    </form>
+    </section>
   );
 };
 
